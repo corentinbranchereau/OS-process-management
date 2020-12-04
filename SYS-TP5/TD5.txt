@@ -1,0 +1,162 @@
+EXERCICE 1:////////////
+
+//init
+semaphore S= 0;
+
+//thread A
+C1;
+V(S);
+
+//thread B
+p(S);
+C2;
+
+
+
+EXERCICE 2://///////
+
+//init
+Semaphore X=0;
+Semaphore Y=0;
+
+//thread A
+C1;
+V(X)
+P(Y)
+C3;
+
+//thread B
+P(X);
+C2;
+V(Y);
+
+EXERCICE 3///////////
+
+______init
+Semaphore X=0;
+Semaphore Y=0;
+Semaphore Z=0;
+
+______T1
+C1
+V(X)
+V(X)
+V(X)
+
+______T2
+P(X)
+C2;
+V(Y);
+
+______T3
+P(X)
+C3;
+V(Y);
+
+______T4
+P(X)
+C4;
+V(Z)
+
+______T5
+P(Y)
+P(Y)
+C5
+P(Z)
+
+______T6
+P(Z)
+P(Z)
+C6
+
+
+EXERCICE 4////////////////
+
+______init
+Semaphore X=0;
+Semaphore Y=1;
+
+______TA
+P(Y)
+C1
+V(X)
+
+______TB
+P(X)
+C2
+V(Y)
+
+EXERCICE 5////////////////
+
+1) C1, D1, C2, D2, C3, D3, C4, D4
+2) A1-A5 B1-B5 C1-C5 D1-D5
+3)
+C4: V(SX)   D4: V(SY)
+    P(SY)       P(SY)
+    P(SX)       P(SX)
+
+EXERCICE 6 //////////////
+
+C1-->C4
+C3-->C2
+C1-->C2
+C3-->C4
+
+Sémaphore Binaire
+
+EXERCICE 7 ////////////
+
+______init
+Semaphore X=0
+...
+Semaphore N=0
+
+______T1
+C1
+V(X)
+P(Y)
+P(Z)
+....
+P(N)
+C2
+
+______TN
+C2N
+V(N)
+P(X)
+P(Y)
+....
+P(N-1)
+C(2N+1)
+
+EXERCICE 8///////////
+
+______init
+Semaphore A=0
+Semaphore B=0
+
+______T1
+C1
+V(X)
+P(X)
+
+EXERCICE 9/////////
+
+
+______init
+Semaphore X=0;
+Semaphore Y=0;
+
+
+______trains de A vers B : X
+
+p(Y)
+v(Y)
+train;
+V(X)
+
+______trains de B vers A : Y
+P(X)
+V(X)
+train
+V(Y)
